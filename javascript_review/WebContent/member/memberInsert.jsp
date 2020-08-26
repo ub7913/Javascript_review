@@ -81,7 +81,7 @@ function inputCheck() {
 		<button>등록</button>
 		<!-- <button type="button" name="submit" onclick="inputCheck()">등록</button> -->
 	</div>
-</div>
 </form>
+</div>
 </body>
 </html>
