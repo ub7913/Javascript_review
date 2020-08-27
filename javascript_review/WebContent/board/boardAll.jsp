@@ -23,7 +23,7 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td><a href="memberSelect.jsp">1</td>
+				<td><a href="boardSelect.jsp">1</td>
 				<td>우좜마</a></td>
 				<td>니나노</td>
 				<td>나이스롸임</td>

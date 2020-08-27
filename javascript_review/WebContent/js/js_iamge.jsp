@@ -11,21 +11,21 @@
 </head>
 <body>
 <script>
-var imgArr = ["./images/우주하마.jpg",
-			  "./images/Desert.jpg",
-			  "./images/Koala.jpg",
-			  "./images/Jellyfish.jpg"];
+var imgArr = ["../images/우주하마.jpg",
+			  "../images/Desert.jpg",
+			  "../images/Koala.jpg",
+			  "../images/Jellyfish.jpg"];
 for(var i=0; i<imgArr.length; i++) {
 	var img = document.createElement("img");
 	img.src = imgArr[i];
 	document.body.appendChild(img);
 	
-	img.onmouseover = function() {
-		this.style.width = "200px";
-	}
-	img.onmouseout = function() {
+	img.addEventListener("mouseover", function() {
+		this.style.width = "200px";//this는 타겟을 가르킴(자기 자신을 의미함)
+	});
+	img.addEventListener("mouseout", function() {
 		this.style.width = "100px";
-	}
+	});
 }
 </script>
 <p></p>

@@ -12,6 +12,13 @@
 	<button type="button" id="btnDel" onclick="delFruit()">삭제</button><!-- 참조x.remove(x.selectedIndex); -->
 	<select id="listFruit" size="10"></select>
 	<script>
+	//텍스트 필드의 값을 select에 추가
+	txtFruit.addEventListener("keypress", function() {
+		if(event.keyCode == 13) {
+			addFruit();	
+		};
+	});
+	
 	function addFruit() {
 		//텍스트필드의 값을 select에 추가
 		var listFruit = document.getElementById("listFruit");
@@ -22,6 +29,13 @@
 		listFruit.add(option);
 		//입력필드 초기화
 		txt.fruit.value = "";
+	}
+	
+	function delFruit() {
+		var listFruit = document.getElementById("listFruit");
+		var option = document.createElement("option");
+		option.text = txtFruit.value;
+		listFruit.remove(option);
 	}
 	</script>
 </body>

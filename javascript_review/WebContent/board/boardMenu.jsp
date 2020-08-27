@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<link rel="stylesheet" type="text/css" href="../common.css">
 <ul class="menu">
 	<li><a href="boardInsert.jsp">게시글등록</a></li>
 	<li><a href="boardSelect.jsp">선택게시글조회</a></li>
