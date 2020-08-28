@@ -17,6 +17,8 @@
 <body>
 <img src="../images/Koala.jpg" id="img1">
 <script>
+	img1.style.left = "0px";
+	img1.style.left = "0px";
 	document.addEventListener("mousemove", function() {
 		console.log(event.button);
 		//if(event.button == 0) {
@@ -24,11 +26,17 @@
 			img1.style.top = event.clientY + "px";
 		//}
 	});
-	document.addEventListener("keydown", function() {
+	document.body.addEventListener("keydown", function() {
 		//console.log(event.keyCode);
 		if(event.keyCode == 37) {
 			img1.style.left = (parseInt(img1.style.left) - 10) + "px";
-		} 
+		} else if(event.keyCode == 38) {
+			img1.style.top = (parseInt(img1.style.top) - 10) + "px";
+		} else if(event.keyCode == 39) {
+			img1.style.left = (parseInt(img1.style.left) + 10) + "px";
+		} else if(event.keyCode == 40) {
+			img1.style.top = (parseInt(img1.style.top) + 10) + "px";
+		}
 	});
 </script>
 </body>

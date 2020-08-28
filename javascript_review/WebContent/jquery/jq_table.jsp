@@ -5,10 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script>
-	//tbody의 2열의 국어 성적의 합계를 계산하여 span 태그에 출력
-	
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+		crossorigin="anonymous">
 </script>
+
 </head>
 <body>
 <table border="1" id="tbl">
@@ -38,5 +39,12 @@
 	</tbody>
 </table>
 <div>국어합계: <span id="kor"></span></div>
+<script>
+	//tbody의 2열의 국어 성적의 합계를 계산하여 span 태그에 출력
+	var a = parseInt($("td:nth-child(2)").eq(1).html());
+	var b = parseInt($("td:nth-child(2)").eq(2).html());
+	var c = parseInt($("td:nth-child(2)").eq(3).html());
+	$("#kor").html(a+b+c);
+</script>
 </body>
 </html>

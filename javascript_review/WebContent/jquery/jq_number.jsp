@@ -45,7 +45,7 @@ function checkResult() {
 	
 	if(ocnt + xcnt == 5) {
 		alert("결과는 " + (ocnt * 20) + "점 입니다");
-		$("#bntResult").on("disabled","disabled") ; // 비활성화 어떻게 하는것?
+		$("#btnResult").attr("disabled", true); 
 		$("#divResult").html("결과는 " + (ocnt * 20) + "점 입니다");
 	} else {
 		init();
