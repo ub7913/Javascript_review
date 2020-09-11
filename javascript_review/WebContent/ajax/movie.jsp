@@ -24,9 +24,12 @@ function loadInfo() {
 	var url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=430156241533f1d058c603178cc3ca0e&movieCd=" + cd;
 	$.getJSON(url, function(obj) {
 		var movieNm = obj.movieInfoResult.movieInfo.movieNm;
-		var director = obj.movieInfoResult.movieInfo.directors;
+		var director = obj.movieInfoResult.movieInfo.directors[0].peopleNm;
 		var actor = obj.movieInfoResult.movieInfo.actors;
-		$("#info").html(movieNm, director, actor);
+		var showTm = obj.movieInfoResult.movieInfo.showTm;
+		
+		$("#info").html(director);
+		//$("#info").html(showTm + movieNm);
 	});
 }
 /*---------------------------------------------------------------------

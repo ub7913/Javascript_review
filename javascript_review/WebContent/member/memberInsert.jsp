@@ -42,7 +42,7 @@ function inputCheck() {
 <%@include file="menu.jsp"%>
 <h3>회원등록</h3>
 <div class="regist">
-	<form method="post" name="frm" id="frm" 
+<form method="post" name="frm" id="frm" 
 		  action="memberInsertProc.jsp" 
 		  onsubmit="return inputCheck()">
 	<div>
